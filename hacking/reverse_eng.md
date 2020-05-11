@@ -1,12 +1,16 @@
-# User Cases
+# SSL MITM
+
+## User Cases
 
 What is offered to user:
 
 main API
-```
+
+```text
 Stalker.follow([threadId, options])
 ```
-# Following
 
-## gum_stalker_follow_me
+## Following
+
+### gum\_stalker\_follow\_me
 
