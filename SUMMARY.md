@@ -2,7 +2,6 @@
 
 ## General Learning
 
-* [Introduction](README.md)
 * [kaggle](kaggle/README.md)
   * [Jigsaw Biased Comments](kaggle/jigsaw.md)
   * [Try New Competition](kaggle/try_new_kaggle_compatition.md)
