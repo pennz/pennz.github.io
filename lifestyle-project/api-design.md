@@ -27,7 +27,7 @@ Authentication token to track down who is emptying our stocks.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
-{% api-method-query-parameters %}
+{% api-method-qquery-parameters %}
 {% api-method-parameter name="recipe" type="string" %}
 The API will do its best to find a cake matching the provided recipe.
 {% endapi-method-parameter %}
@@ -35,7 +35,7 @@ The API will do its best to find a cake matching the provided recipe.
 {% api-method-parameter name="gluten" type="boolean" %}
 Whether the cake should be gluten-free or not.
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-qquery-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
