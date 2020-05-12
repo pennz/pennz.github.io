@@ -18,6 +18,7 @@
 ## Lifestyle Project
 
 * [API Design](lifestyle-project/api-design.md)
+  * [API meta](lifestyle-project/meta_api.md)
 * [Usage Example](usage-example/README.md)
   * [Untitled](usage-example/untitled-1.md)
   * [Untitled](usage-example/untitled.md)
