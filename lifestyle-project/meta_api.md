@@ -3,39 +3,39 @@ all api ... have end sentense
 we could generate our structured data for describing the api(web api)
 
 ```go
-type apiMethod struct {
+type APIMethod struct {
 	method               string
 	host                 string
 	path                 string
-	apiMethodSummary     string
-	apiMethodDescription string
-	apiMethodSpec
+	APIMethodSummary     string
+	APIMethodDescription string
+	APIMethodSpec
 }
-type apiMethodSpec struct {
-	apiMethodRequest
-	apiMethodResponse
+type APIMethodSpec struct {
+	APIMethodRequest
+	APIMethodResponse
 }
-type apiMethodRequest struct {
-	apiMethodPathParameters  requestField
-	apiMethodHeaders         requestField
-	apiMethodQueryParameters requestField
+type APIMethodRequest struct {
+	APIMethodPathParameters  requestField
+	APIMethodHeaders         requestField
+	APIMethodQueryParameters requestField
 }
 type requestField struct {
-	apiMethodParameter
+	APIMethodParameter
 }
-type apiMethodParameter struct {
+type APIMethodParameter struct {
 	name     string
 	_type    string
 	required bool
 	text     string
 }
 
-type apiMethodResponse struct {
-	apiMethodResponseExample
+type APIMethodResponse struct {
+	APIMethodResponseExample
 }
-type apiMethodResponseExample struct {
+type APIMethodResponseExample struct {
 	httpCode                            int
-	apiMethodResponseExampleDescription string
+	APIMethodResponseExampleDescription string
 }
 ```
 
