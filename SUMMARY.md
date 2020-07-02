@@ -1,6 +1,5 @@
 # Table of contents
-
-## General Learning
+## Learning
 
 * [kaggle](kaggle/README.md)
   * [Jigsaw Biased Comments](kaggle/jigsaw.md)
@@ -24,3 +23,5 @@
   * [Untitled](usage-example/untitled.md)
   * [Test1](usage-example/test1.md)
 
+## Tools
+* [Internet Access](lifestyle-project/internet-access.md)
