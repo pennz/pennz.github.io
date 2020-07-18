@@ -13,6 +13,8 @@
   * [SSL MITM](hacking/reverse_eng.md)
 * [devops](devops/README.md)
   * [devops](devops/git_usage.md)
+* [Tools](tools/README.md)
+  * [market](tools/market.md)
 
 ## Lifestyle Project
 
