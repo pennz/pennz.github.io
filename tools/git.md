@@ -33,7 +33,7 @@ This is a compilation of these three web-pages. For intermediate git users.
 	- Convert your older repos to Git
 	- Use GitHub project boards
 	- Collaborate on documentation in wikis
-- My suggestion
+- My suggestions
 	- tag your commits (adding more information to your code)
 	- Include batteries (tests and examples)
 
@@ -53,13 +53,15 @@ This is a compilation of these three web-pages. For intermediate git users.
 	git config --global core.excludesFile ~/.gitignore
 	```
 - Enable Git’s autosquash feature by default
-    - git rebase -i --autosquash
-    - git config --global rebase.autosquash true
+```shell
+git rebase -i --autosquash
+git config --global rebase.autosquash true
+```
 	`git rebase --interactive --autosquash` only picks up on commits with a
 message that begins **fixup!** or **squash!**, and Git still gives you the
 chance to to move things around in your editor like a regular interactive
 rebase.
-    [Detail in this thoughtbot blog post](https://thoughtbot.com/blog/autosquashing-git-commits)
+	[**You can check more details in this thoughtbot blog post**](https://thoughtbot.com/blog/autosquashing-git-commits)
 - git blame
 	```shell
 	git blame -w  # ignores white space
@@ -77,11 +79,11 @@ git mr upstream 5
 ```
 
 - An alias of HEAD
-Breaking news: @ is the same as HEAD. Using it during a rebase is a lifesaver:
+	Breaking news: @ is the same as HEAD. Using it during a rebase is a lifesaver:
 ```shell
 git rebase -i @~2 # rebase from the second pevious to HEAD
 ```
-- git reset / git checkout to undo changes
+- `git reset` / `git checkout` to undo changes
 
 
 # [opensource.com 13 Git tips for Git's 13th birthday](https://opensource.com/article/18/4/git-tips)
@@ -108,19 +110,23 @@ git rebase -i @~2 # rebase from the second pevious to HEAD
 ```
 
 - a nicer force-push
-	use git push --force-with-lease, it will not allow you to force-push if the remote branch has been updated. So you won't throw away someone else's work
+	Use `git push --force-with-lease`, it will not allow you to force-push if the remote branch has been updated. So you won't throw away someone else's work
 - more fine-grained add/change
-	- git add -N (then you can use git diff show differences before you use git add -a, you can check it)
-	- git add -p (more fine grained)
-	- git checkout -p
-	- git rebase -x/ git rebase --exec , you can run test suit after each rebase commit
+	```shell
+	git add -N #(then you can use git diff show differences before you use git add -a, you can check it)
+	git add -p #(more fine grained)
+	git checkout -p
+	git rebase -x/ git rebase --exec YOUR_COMMAND_TO_TEST # you can run test suit after each rebase commit
+	```
 - time-based revision references
-    - git diff HEAD@{yesterday} , compare current HEAD with the HEAD of yesterday
-    - git diff HEAD@{'2 months ago'}
-    - git diff HEAD@{'2010-01-01 12:00:00'}
+	```shell
+	git diff HEAD@{yesterday} , compare current HEAD with the HEAD of yesterday
+	git diff HEAD@{'2 months ago'}
+	git diff HEAD@{'2010-01-01 12:00:00'}
+	```
 
 - `git rebase` and `git reflog`
-	if you ever found you rebased away a committed changes, you can use git reflog to find it
+	if you ever found you rebased away a committed changes, you can use `git reflog` to find it.
 - keep it clean
 	`git branch --merged` to get the list of merged branches. Then you can clean it up
 
