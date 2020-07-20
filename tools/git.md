@@ -37,33 +37,35 @@ This is a compilation of these three web-pages. For intermediate git users.
 	- tag your commits (adding more information to your code)
 	- Include batteries (tests and examples)
 
-# [gitlab 15 Git tips to improve your workflow](https://app.getpocket.com/read/2942044161)
+# [gitlab 15 Git tips to improve your workflow](https://about.gitlab.com/blog/2020/04/07/15-git-tips-improve-workflow/)
 - git aliases
 - See the repository status in your terminal’s prompt (edit PS1)
 - Compare commits from the command line
-```
-    git diff $start_commit..$end_commit -- path/to/file  # compare changes between the commits, you can also specify HEAD@{yesterday}
-
-```
+	```shell
+	git diff $start_commit..$end_commit -- path/to/file  # compare changes between the commits, you can also specify HEAD@{yesterday}
+	```
 - Stashing uncommitted changes
 - Pull frequently
-- Autocomplete commands (Tab)
+- Autocomplete commands (Tab), so your loop can be faster
 - Set a global .gitignore
-```shell
-touch ~/.gitignore
-git config --global core.excludesFile ~/.gitignore
-```
+	```shell
+	touch ~/.gitignore
+	git config --global core.excludesFile ~/.gitignore
+	```
 - Enable Git’s autosquash feature by default
     - git rebase -i --autosquash
     - git config --global rebase.autosquash true
-    - git rebase --interactive --autosquash only picks up on commits with a message that begins fixup! or squash!, and Git still gives you the chance to to move things around in your editor like a regular interactive rebase.
-    [thoughtbot](https://thoughtbot.com/blog/autosquashing-git-commits)
+	`git rebase --interactive --autosquash` only picks up on commits with a
+message that begins **fixup!** or **squash!**, and Git still gives you the
+chance to to move things around in your editor like a regular interactive
+rebase.
+    [Detail in this thoughtbot blog post](https://thoughtbot.com/blog/autosquashing-git-commits)
 - git blame
-```shell
-git blame -w  # ignores white space
-git blame -M  # ignores moving text
-git blame -C  # ignores moving text into other files
-```
+	```shell
+	git blame -w  # ignores white space
+	git blame -M  # ignores moving text
+	git blame -C  # ignores moving text into other files
+	```
 - Add an alias to check out merge requests locally
 In your .gitconfig file
 ```
@@ -118,3 +120,5 @@ Breaking news: @ is the same as HEAD. Using it during a rebase is a lifesaver:
 	if you ever found you rebased away a committed changes, you can use git reflog to find it
 - keep it clean: `git branch --merged` to get the list of merged branches. Then you can clean it up
 
+# Version history
+- v1 20200720 draft
