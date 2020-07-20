@@ -78,7 +78,9 @@ git mr upstream 5
 
 - An alias of HEAD
 Breaking news: @ is the same as HEAD. Using it during a rebase is a lifesaver:
-`git rebase -i @~2`
+```shell
+git rebase -i @~2 # rebase from the second pevious to HEAD
+```
 - git reset / git checkout to undo changes
 
 
@@ -88,12 +90,12 @@ Breaking news: @ is the same as HEAD. Using it during a rebase is a lifesaver:
 	- your ~/.gitconfig file (you need set git config your name and email for first use of git. it is saved to this file)
 	- your repo's .gitconfig
 - aliases (faster command)
-    - git config --global --add alias.st status, so git st will do the same as git status
+    - `git config --global --add alias.st status`, so `git st` will do the same as `git status`
     - previous command will save to the ~/.gitconfig file
-    - you can also aliases to shell commands
+    - you can also aliases to shell commands, put it to the alias section in your .gitconfig
         - upstream-merge = !"git fetch origin -v && git fetch upstream -v && git merge upstream/master && git push"
 - visializing the commit graph
-	using gitconfig
+	using this git alias
 ```
 [alias]
     logp = log --pretty=oneline --graph --decorate=full
@@ -105,7 +107,8 @@ Breaking news: @ is the same as HEAD. Using it during a rebase is a lifesaver:
     lg = !"git lg1"
 ```
 
-- a nicer force-push : use git push --force-with-lease, it will not allow you to force-push if the remote branch has been updated. So you won't throw away someone else's work
+- a nicer force-push
+	use git push --force-with-lease, it will not allow you to force-push if the remote branch has been updated. So you won't throw away someone else's work
 - more fine-grained add/change
 	- git add -N (then you can use git diff show differences before you use git add -a, you can check it)
 	- git add -p (more fine grained)
@@ -118,7 +121,8 @@ Breaking news: @ is the same as HEAD. Using it during a rebase is a lifesaver:
 
 - `git rebase` and `git reflog`
 	if you ever found you rebased away a committed changes, you can use git reflog to find it
-- keep it clean: `git branch --merged` to get the list of merged branches. Then you can clean it up
+- keep it clean
+	`git branch --merged` to get the list of merged branches. Then you can clean it up
 
 # Version history
 - v1 20200720 draft
