@@ -15,6 +15,7 @@
   * [devops](devops/git_usage.md)
 * [Tools](tools/README.md)
   * [market](tools/market.md)
+  * [git](tools/git.md)
 
 ## Lifestyle Project
 
