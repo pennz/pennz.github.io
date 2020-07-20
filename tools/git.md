@@ -53,10 +53,10 @@ This is a compilation of these three web-pages. For intermediate git users.
 	git config --global core.excludesFile ~/.gitignore
 	```
 - Enable Git’s autosquash feature by default
-```shell
-git rebase -i --autosquash
-git config --global rebase.autosquash true
-```
+	```shell
+	git rebase -i --autosquash
+	git config --global rebase.autosquash true
+	```
 	`git rebase --interactive --autosquash` only picks up on commits with a
 message that begins **fixup!** or **squash!**, and Git still gives you the
 chance to to move things around in your editor like a regular interactive
@@ -70,19 +70,19 @@ rebase.
 	```
 - Add an alias to check out merge requests locally
 In your .gitconfig file
-```
-[alias]
-  mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
-```
-```shell
-git mr upstream 5
-```
+	```
+	[alias]
+	  mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+	```
+	```shell
+	git mr upstream 5
+	```
 
 - An alias of HEAD
 	Breaking news: @ is the same as HEAD. Using it during a rebase is a lifesaver:
-```shell
-git rebase -i @~2 # rebase from the second pevious to HEAD
-```
+	```shell
+	git rebase -i @~2 # rebase from the second pevious to HEAD
+	```
 - `git reset` / `git checkout` to undo changes
 
 
@@ -92,35 +92,37 @@ git rebase -i @~2 # rebase from the second pevious to HEAD
 	- your ~/.gitconfig file (you need set git config your name and email for first use of git. it is saved to this file)
 	- your repo's .gitconfig
 - aliases (faster command)
-    - `git config --global --add alias.st status`, so `git st` will do the same as `git status`
-    - previous command will save to the ~/.gitconfig file
-    - you can also aliases to shell commands, put it to the alias section in your .gitconfig
-        - upstream-merge = !"git fetch origin -v && git fetch upstream -v && git merge upstream/master && git push"
+	- `git config --global --add alias.st status`, so `git st` will do the same as `git status`
+	- previous command will save to the ~/.gitconfig file
+	- you can also aliases to shell commands, e.g., put the following command to the alias section in your .gitconfig.
+	```
+	upstream-merge = !"git fetch origin -v && git fetch upstream -v && git merge upstream/master && git push"
+	```
 - visializing the commit graph
 	using this git alias
-```
-[alias]
-    logp = log --pretty=oneline --graph --decorate=full
-    logt = log --pretty=oneline --graph --topo-order
-    logd = log --pretty=oneline --graph --date-order
-    loga = log --oneline --decorate=full
-    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-    lg = !"git lg1"
-```
+	```
+	[alias]
+	    logp = log --pretty=oneline --graph --decorate=full
+	    logt = log --pretty=oneline --graph --topo-order
+	    logd = log --pretty=oneline --graph --date-order
+	    loga = log --oneline --decorate=full
+	    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	    lg = !"git lg1"
+	```
 
 - a nicer force-push
 	Use `git push --force-with-lease`, it will not allow you to force-push if the remote branch has been updated. So you won't throw away someone else's work
 - more fine-grained add/change
 	```shell
-	git add -N #(then you can use git diff show differences before you use git add -a, you can check it)
-	git add -p #(more fine grained)
+	git add -N # then you can use git diff show differences before you use git add -a, you can check it
+	git add -p # more fine grained
 	git checkout -p
 	git rebase -x/ git rebase --exec YOUR_COMMAND_TO_TEST # you can run test suit after each rebase commit
 	```
 - time-based revision references
 	```shell
-	git diff HEAD@{yesterday} , compare current HEAD with the HEAD of yesterday
+	git diff HEAD@{yesterday} # compare current HEAD with the HEAD of yesterday
 	git diff HEAD@{'2 months ago'}
 	git diff HEAD@{'2010-01-01 12:00:00'}
 	```
