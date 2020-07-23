@@ -2,6 +2,7 @@ Some advices and useful commands for git.
 This is a compilation of these three web-pages. For intermediate git users.
 
 <!--# gist for these changes/github (just put to my dotfiles) -->
+{% github_embed "https://github.com/v5analytics/gitbook-plugin-github-embed/blob/1cd16ac/index.js#L3-L8" %}{% endgithub_embed %}
 
 # [Great advices](https://www.infoworld.com/article/3205884/27-essential-tips-for-git-and-github-users.html)
 - Coding/Actions/CI
