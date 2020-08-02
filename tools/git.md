@@ -2,7 +2,9 @@ Some advices and useful commands for git.
 This is a compilation of these three web-pages. For intermediate git users.
 
 <!--# gist for these changes/github (just put to my dotfiles) -->
-
+# [Useful commands]
+- `git diff --name-only --diff-filter=U` # [ref](https://stackoverflow.com/questions/3065650/whats-the-simplest-way-to-list-conflicted-files-in-git)
+- `git config --global alias.conflicts "diff --name-only --diff-filter=U"`
 # [Great advices](https://www.infoworld.com/article/3205884/27-essential-tips-for-git-and-github-users.html)
 - Coding/Actions/CI
 	- Clone almost anything
