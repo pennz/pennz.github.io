@@ -7,6 +7,9 @@ This is a compilation of these three web-pages. For intermediate git users.
 - `git diff --name-only --diff-filter=U` # [ref](https://stackoverflow.com/questions/3065650/whats-the-simplest-way-to-list-conflicted-files-in-git)
 - `git config --global alias.conflicts "diff --name-only --diff-filter=U"`
 - `git rebase --onto NEW_BASE_COMMIT CHANGE_FROM_COMMIT CHANGE_END_COMMIT`
+- `git clone --depth 1  --branch BRANCH_NAME REMOTE_REPO_URL` # shallow clone specific branch
+- `git remote set-branches origin '*'; git fetch -v; git checkout the-branch-i-ve-been-looking-for` # https://stackoverflow.com/questions/23708231/git-shallow-clone-clone-depth-misses-remote-branches
+- `git fetch --unshallow` # to full clone
 
 # [Great advices](https://www.infoworld.com/article/3205884/27-essential-tips-for-git-and-github-users.html)
 - Coding/Actions/CI
