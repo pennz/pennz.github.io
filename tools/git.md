@@ -11,6 +11,43 @@ This is a compilation of these three web-pages. For intermediate git users.
 - `git remote set-branches origin '*'; git fetch -v; git checkout the-branch-i-ve-been-looking-for` # https://stackoverflow.com/questions/23708231/git-shallow-clone-clone-depth-misses-remote-branches
 - `git fetch --unshallow` # to full clone
 
+```
+NAME
+
+git-rev-list - Lists commit objects in reverse chronological order
+SYNOPSIS
+
+git rev-list [<options>] <commit>…​ [[--] <path>…​]
+
+git grep PATTERM $(git rev-list --all -- PATH) -- PATH # search all changes for this pattern
+
+split feature!! clean, so you know it.
+
+
+
+You want branch descriptions:
+
+git branch --edit-description
+
+This will open up your editor and let you attach metadata to the branch. You can extract it with:
+
+git config branch.<branch>.description
+
+A couple of important notes:
+
+    This is stored locally. By definition it can't be pushed since it's stored in .git/config. All the same it works great for this use case.
+
+    If you delete the branch, the description will delete as well.
+
+    You can push this description into merge commits if you set git config --global merge.branchdesc true. This means when you issue git merge --log <branch>, it'll force the branch description into the stock merge commit message. This has a lot of uses. For example, this is how I track topic branch release notes at my employer.
+
+
+
+https://stackoverflow.com/questions/11886132/can-i-add-a-message-note-comment-when-creating-a-new-branch-in-git
+```
+
+
+
 # [Great advices](https://www.infoworld.com/article/3205884/27-essential-tips-for-git-and-github-users.html)
 - Coding/Actions/CI
 	- Clone almost anything
