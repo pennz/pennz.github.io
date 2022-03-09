@@ -19,13 +19,9 @@
 
 ## Lifestyle Project
 
-* [API Design](lifestyle-project/api-design.md)
-  * Relationship(谓词逻辑)
-  * [API meta](lifestyle-project/meta_api.md)
 * [Usage Example](usage-example/README.md)
   * [Untitled](usage-example/untitled-1.md)
   * [Untitled](usage-example/untitled.md)
   * [Test1](usage-example/test1.md)
 
 ## Tools
-* [Internet Access](lifestyle-project/internet-access.md)
