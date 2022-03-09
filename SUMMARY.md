@@ -16,12 +16,5 @@
 * [Tools](tools/README.md)
   * [market](tools/market.md)
   * [git](tools/git.md)
-
-## Lifestyle Project
-
-* [Usage Example](usage-example/README.md)
-  * [Untitled](usage-example/untitled-1.md)
-  * [Untitled](usage-example/untitled.md)
-  * [Test1](usage-example/test1.md)
-
+* [AP](AP/Summary-for-Explanation-of-ara__com-API-of-AP-R21-11.md)
 ## Tools
